@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <!-- Login Screen Buttons Style -->
+    <style name="LoginButtonsStyle">
+        <item name="android:layout_width">@dimen/login_button_width</item>
+        <item name="android:layout_height">@dimen/login_button_height</item>
+    </style>
+
+    <!-- Registration Edit Text Style -->
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/registration_text_size</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/light_grey</item>
+        <item name="colorControlNormal">@color/light_grey</item>
+        <item name="colorControlActivated">@color/light_grey</item>
+        <item name="colorControlHighlight">@color/light_grey</item>
+    </style>
+
+    <!-- Tool Bar style -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Menu Screen Menu Items style -->
+    <style name="MainMenuItem">
+        <item name="android:textSize">@dimen/menu_item_text_size</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">@dimen/menu_item_margin</item>
+        <item name="android:layout_width">@dimen/menu_item_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="@dimen/buying_item_view_width"
+    android:layout_height="@dimen/buying_item_view_height"
+    android:orientation="vertical">
+
+    <!-- Images Container -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+
+        android:layout_width="@dimen/buying_item_image_container_width"
+        android:layout_height="@dimen/buying_item_image_container_height">
+
+        <LinearLayout
+            android:id="@+id/imagesContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="@dimen/buying_price_textview_width"
+        android:layout_height="@dimen/buying_price_textview_height"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:text="$2.5 Million"
+        android:textSize="@dimen/buying_price_textview_text_size" />
+
+    <LinearLayout
+        android:layout_width="@dimen/buying_item_details_width"
+        android:layout_height="@dimen/buying_item_details_height"
+        android:layout_below="@id/horizontalScrollView"
+        android:background="@drawable/buying_item_details_bg_layers_list"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/buyingItemFullAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="left"
+            android:text="@string/buying_item_address_full_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/buying_item_address_text_size" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="1dp"
+            android:layout_height="3dp" />
+
+        <TextView
+            android:id="@+id/buyingItemFullDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="left"
+            android:text="@string/buying_item_property_details"
+            android:textColor="@color/light_grey"
+            android:textSize="@dimen/buying_item_details_text_size" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/buyingItemLikeImageView"
+        android:layout_width="@dimen/buying_item_like_width"
+        android:layout_height="@dimen/buying_item_like_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/buying_item_like_bottom_margin"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/like_empty" />
+
+</RelativeLayout>

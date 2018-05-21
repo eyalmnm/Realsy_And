@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="light_grey">#D2D2D2</color>
+
+
+    <!-- Application's main colors -->
+    <color name="color_primary">#00B16A</color>
+    <color name="color_primary_dark">#00B16A</color>
+    <color name="color_accent">@color/light_grey</color>
+    <color name="text_color">@color/white</color>
+
+    <!-- Splash screen colors -->
+    <color name="splash_background_color">#00B16A</color>
+
+    <!-- Intro Screen Colors -->
+    <color name="intro_title_box_bg_color">#00B16A</color>
+    <color name="intro_title_text_color">@color/white</color>
+    <color name="intro_next_button_bg_color">@color/white</color>
+    <color name="intro_next_button_text_color">@color/black</color>
+
+    <!-- Login Screen Colors -->
+    <color name="login_semi_trans_green">#EE00B16A</color>
+    <color name="login_button_text_color">@color/black</color>
+    <color name="login_button_bg_color">@color/white</color>
+    <color name="login_message_text_color">@color/white</color>
+
+    <!-- Registration Screen Colors -->
+    <color name="registration_text_color">@color/light_grey</color>
+    <color name="register_by_mail_sign_in_text_color">#6A6A6A</color>
+
+    <!-- Buying Tab Colors -->
+    <color name="buying_tab_shared_listing_text_color">#6A6A6A</color>
+    <color name="buying_tab_favorite_listing_text_color">#6A6A6A</color>
+
+
+</resources>

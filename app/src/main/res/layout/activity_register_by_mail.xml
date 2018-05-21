@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_width="@dimen/register_by_mail_field_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/registerByMailInputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registration_name_edittext_hint"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingBottom="11dp"
+            android:textColor="@color/registration_text_color"
+            android:textColorHint="@color/registration_text_color"
+            android:textSize="@dimen/registration_text_size" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="@dimen/register_by_mail_field_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/registerByMailInputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registration_email_edittext_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingBottom="11dp"
+            android:textColor="@color/registration_text_color"
+            android:textColorHint="@color/registration_text_color"
+            android:textSize="@dimen/registration_text_size" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="@dimen/register_by_mail_field_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/registerByMailInputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registration_password_edittext_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingBottom="11dp"
+            android:textColor="@color/registration_text_color"
+            android:textColorHint="@color/registration_text_color"
+            android:textSize="@dimen/registration_text_size" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/registerByMailSubmitButton"
+        android:layout_width="@dimen/register_by_mail_field_width"
+        android:layout_height="@dimen/register_by_mail_submit_button_height"
+        android:layout_below="@id/input_layout_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/register_by_mail_submit_btn_bg_selector"
+        android:text="@string/registration_submit_button"
+        android:textAllCaps="true"
+        android:textColor="@color/register_by_mail_submit_btn_text_color_selector"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/registerByMailSignInMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerByMailSubmitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/registration_login_sign_in"
+        android:textColor="@color/register_by_mail_sign_in_text_color"
+        android:textSize="16sp" />
+
+</RelativeLayout>

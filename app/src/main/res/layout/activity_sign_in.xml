@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_email"
+        android:layout_width="@dimen/sign_in_field_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/signInInputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registration_email_edittext_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingBottom="11dp"
+            android:textColor="@color/registration_text_color"
+            android:textColorHint="@color/registration_text_color"
+            android:textSize="@dimen/registration_text_size" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_password"
+        android:layout_width="@dimen/sign_in_field_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_layout_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:theme="@style/TextLabel">
+
+        <EditText
+            android:id="@+id/signInInputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/registration_password_edittext_hint"
+            android:imeOptions="actionSend"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingBottom="11dp"
+            android:textColor="@color/registration_text_color"
+            android:textColorHint="@color/registration_text_color"
+            android:textSize="@dimen/registration_text_size" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/signInSubmitButton"
+        android:layout_width="@dimen/sign_in_field_width"
+        android:layout_height="@dimen/sign_submit_button_height"
+        android:layout_below="@id/input_layout_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/register_by_mail_submit_btn_bg_selector"
+        android:text="@string/registration_submit_button"
+        android:textAllCaps="true"
+        android:textColor="@color/register_by_mail_submit_btn_text_color_selector"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/signInRegistarionMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signInSubmitButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/sign_in_registrartion_message"
+        android:textColor="@color/register_by_mail_sign_in_text_color"
+        android:textSize="16sp" />
+
+</RelativeLayout>

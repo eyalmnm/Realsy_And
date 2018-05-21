@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">REALSY</string>
+
+    <!-- FaceBook -->
+    <string name="facebook_app_id" translatable="false">2088813194729478</string>
+
+    <!-- Intro Screen Strings -->
+    <string name="intro_title_main_1">Find your next home</string>
+    <string name="intro_title_sub_1">Our technology makes finding your next home as easy as it can be.</string>
+    <string name="intro_title_main_2">Sell your home</string>
+    <string name="intro_title_sub_2">Selling your home has never been this easy and this stress free.</string>
+    <string name="intro_title_main_3">Convenient messenger</string>
+    <string name="intro_title_sub_3">With our messaging tool you can keep all of those involved always in the loop.</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+
+    <!-- Login Screen Strings -->
+    <string name="login_sign_up_with_mail">Sign up with email</string>
+    <string name="login_sign_in">Already a user? Log in here</string>
+
+    <!-- Registration Screen Strings -->
+    <string name="registration_activity_label">Registration</string>
+    <string name="registration_name_edittext_hint">Name</string>
+    <string name="registration_email_edittext_hint">Email</string>
+    <string name="registration_password_edittext_hint">Password</string>
+    <string name="registration_submit_button">Submit</string>
+    <string name="registration_login_sign_in">Already a user? Log in here</string>
+
+    <!-- Sign In Screen Strings -->
+    <string name="sign_in_activity_label">Log In</string>
+    <string name="sign_in_registrartion_message">Don\'t have an account? Register here</string>
+
+    <!-- Location Enable Screen Strings -->
+    <string name="location_enable_main_message">Please enable location for the best experience</string>
+    <string name="location_enable_sub_message">It’s important to have access to your location in order to show you the best options available to you.</string>
+    <string name="location_enable_continue">Continue</string>
+    <string name="menu_item_profile">Profile</string>
+    <string name="menu_item_about_us">About Us</string>
+    <string name="menu_item_faq">FAQ</string>
+    <string name="menu_item_term_condition"><![CDATA[Terms & \nConditions]]></string>
+
+    <!-- Main Menu Srceen Strings -->
+    <string name="menu_agent_message">Are you a Real Estate Agent?</string>
+
+    <!-- Main Menu Srceen Strings -->
+    <string name="profile_phone_edittext_hint">Phone</string>
+    <string name="profile_name_edittext_hint">Name</string>
+    <string name="profile_email_edittext_hint">EMail</string>
+    <string name="profile_password_edittext_hint">Password</string>
+    <string name="profile_submit_button">Submit</string>
+    <string name="profile_activity_label">Profile</string>
+
+    <!-- Buying Layout Strings -->
+    <string name="buying_item_address_full_address">%s, %s, %s</string>
+    <string name="buying_item_property_details">%d Beds | %d Baths | %d sqft</string>
+
+    <!-- Buying Tab Strings -->
+    <string name="buying_tab_shared_string">Listings Shared with you</string>
+    <string name="buying_tab_favorit_string">Favorite Listings</string>
+
+</resources>

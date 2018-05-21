@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/builging" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/login_semi_trans_green" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/menu_screen_logo_top_margin"
+        android:src="@drawable/menu_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/menuItemProfile"
+            style="@style/MainMenuItem"
+            android:layout_marginTop="0dp"
+            android:text="@string/menu_item_profile" />
+
+        <TextView
+            android:id="@+id/menuItemAboutUs"
+            style="@style/MainMenuItem"
+            android:text="@string/menu_item_about_us" />
+
+        <TextView
+            android:id="@+id/menuItemFaq"
+            style="@style/MainMenuItem"
+            android:text="@string/menu_item_faq" />
+
+        <TextView
+            android:id="@+id/menuItemTerms"
+            style="@style/MainMenuItem"
+            android:text="@string/menu_item_term_condition" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/menuItemAgentMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/menu_agent_message"
+        android:textSize="@dimen/menu_screen_agent_message_text_size" />
+
+</RelativeLayout>

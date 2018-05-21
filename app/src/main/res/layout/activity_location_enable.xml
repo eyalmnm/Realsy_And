@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary">
+
+    <ImageView
+        android:id="@+id/markerImaveView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/locatio_enable_marker_top_margin"
+        android:src="@drawable/marker" />
+
+    <View
+        android:id="@+id/centerView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="@dimen/location_enable_main_textview_width"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/centerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/location_enable_main_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/location_enable_main_msg_text_size" />
+
+    <TextView
+        android:layout_width="@dimen/location_enable_main_textview_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:lines="3"
+        android:text="@string/location_enable_sub_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/location_enable_sub_msg_text_size" />
+
+
+    <Button
+        android:id="@+id/locationEnableContinueButton"
+        android:layout_width="@dimen/location_enable_button_width"
+        android:layout_height="@dimen/location_enable_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/location_enable_continue_btn_bg_selector"
+        android:text="@string/location_enable_continue"
+        android:textAllCaps="true"
+        android:textColor="@color/location_enable_continue_btn_text_color_selector"
+        android:textSize="16sp" />
+
+</RelativeLayout>
