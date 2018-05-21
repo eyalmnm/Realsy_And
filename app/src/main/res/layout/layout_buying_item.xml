@@ -22,6 +22,7 @@
     </HorizontalScrollView>
 
     <TextView
+        android:id="@+id/buyingItemPrice"
         android:layout_width="@dimen/buying_price_textview_width"
         android:layout_height="@dimen/buying_price_textview_height"
         android:background="@color/color_primary"
