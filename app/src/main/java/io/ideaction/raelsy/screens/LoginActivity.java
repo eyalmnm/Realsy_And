@@ -173,6 +173,7 @@ public class LoginActivity extends Activity {
         });
     }
 
+    // ********* Handling permissions section *********
     @TargetApi(VERSION_CODES.M)
     private boolean checkPermissions() {
         int internetRes = ContextCompat.checkSelfPermission(getApplicationContext(), INTERNET);
