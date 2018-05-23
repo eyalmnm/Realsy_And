@@ -21,19 +21,16 @@ public class RetrofitConnectionManager {
     private Retrofit retrofit;
     private String baseUrl;
 
-    private Context context;
-
     private static RetrofitConnectionManager instance = null;
 
-    public static RetrofitConnectionManager getInstance(Context context) {
+    public static RetrofitConnectionManager getInstance() {
         if (null == instance) {
-            instance = new RetrofitConnectionManager(context);
+            instance = new RetrofitConnectionManager();
         }
         return instance;
     }
 
-    private RetrofitConnectionManager(Context context) {
-        this.context = context;
+    private RetrofitConnectionManager() {
         baseUrl = BuildConfig.SERVER_BASE_URL;
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
