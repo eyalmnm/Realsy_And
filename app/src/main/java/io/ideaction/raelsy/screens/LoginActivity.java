@@ -38,17 +38,18 @@ import static android.os.Build.VERSION_CODES;
 
 public class LoginActivity extends Activity {
     private static final String TAG = "LoginActivity";
-    // ********* Handling permissions section *********
-    private static final int PERMISSION_REQUEST_CODE = 200;
+
     // UI Components
     private LoginButton faceBookLoginButton;
     private Button emailSignUpButton;
     private TextView loginMessageTextView;
+
     // Facebook Helper
     private CallbackManager callbackManager;
     private AccessToken accessToken;
     private AccessTokenTracker accessTokenTracker;
     private Context context;
+
     // Facebook Callback
     private FacebookCallback<LoginResult> callback = new FacebookCallback<LoginResult>() {
         @Override
@@ -174,6 +175,8 @@ public class LoginActivity extends Activity {
     }
 
     // ********* Handling permissions section *********
+    private static final int PERMISSION_REQUEST_CODE = 200;
+
     @TargetApi(VERSION_CODES.M)
     private boolean checkPermissions() {
         int internetRes = ContextCompat.checkSelfPermission(getApplicationContext(), INTERNET);
