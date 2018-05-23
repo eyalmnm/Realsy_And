@@ -71,9 +71,9 @@
         android:id="@+id/buyingItemLikeImageView"
         android:layout_width="@dimen/buying_item_like_width"
         android:layout_height="@dimen/buying_item_like_height"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="@dimen/buying_item_like_bottom_margin"
+        android:layout_marginTop="190dp"
         android:layout_marginRight="0dp"
         android:src="@drawable/like_empty" />
 
