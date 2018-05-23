@@ -6,14 +6,18 @@ import android.content.SharedPreferences;
 
 public class PreferencesUtils {
     private static final String TAG = "PreferencesUtils";
+
     // Shared preferences file name
     private static final String PREF_NAME = "realsy";
     private static PreferencesUtils instance = null;
+
     // Shared preferences access components
     private SharedPreferences preferences;
     private SharedPreferences.Editor editor;
+
     // Application context
     private Context context;
+
     // Shared preferences working mode
     private int PRIVATE_MODE = 0;
 
@@ -41,13 +45,21 @@ public class PreferencesUtils {
         return preferences.getBoolean("introCompleted", false);
     }
 
+    // Facebook Preferences
     public String getFbToken() {
         return preferences.getString("fbToken", null);
     }
 
-    // Facebook Preferences
     public void setFbToken(String token) {
         editor.putString("fbToken", token);
+        editor.commit();
+    }
+
+    // Client ID Preferences
+    public String getMyClientId() {return preferences.getString("clientId", null); }
+
+    public void setMyClientId(String clientId) {
+        editor.putString("clientId", clientId);
         editor.commit();
     }
 
