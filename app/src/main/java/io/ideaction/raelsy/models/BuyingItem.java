@@ -5,6 +5,8 @@ import android.os.Parcelable;
 
 import java.util.Arrays;
 
+import io.ideaction.raelsy.network.models.BuyingItemModel;
+
 public class BuyingItem implements Parcelable {
 
     private int id;
@@ -40,6 +42,22 @@ public class BuyingItem implements Parcelable {
         this.remarks = remarks;
         this.imagesUrl = imagesUrl;
         this.liked = liked;
+    }
+
+    public BuyingItem(BuyingItemModel buyingItemModel) {
+        this.id = buyingItemModel.getId();
+        this.price = buyingItemModel.getPrice();
+        this.address = buyingItemModel.getAddress();
+        this.city = buyingItemModel.getCity();
+        this.state = buyingItemModel.getState();
+        this.zipCode = buyingItemModel.getZipCode();
+        this.bedRooms = buyingItemModel.getBedRooms();
+        this.bathRooms = buyingItemModel.getBathRooms();
+        this.apartmentArea = buyingItemModel.getApartmentArea();
+        this.totalArea = buyingItemModel.getTotalArea();
+        this.remarks = buyingItemModel.getRemarks();
+        this.imagesUrl = buyingItemModel.getImagesUrl();
+        this.liked = buyingItemModel.isLiked();
     }
 
     public void setLiked(boolean liked) {
