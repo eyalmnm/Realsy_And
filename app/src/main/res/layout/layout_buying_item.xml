@@ -73,7 +73,7 @@
         android:layout_height="@dimen/buying_item_like_height"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="@dimen/buying_item_like_top_margin"
         android:layout_marginRight="0dp"
         android:src="@drawable/like_empty" />
 
