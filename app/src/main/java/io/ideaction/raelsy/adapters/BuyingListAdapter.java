@@ -71,7 +71,7 @@ public class BuyingListAdapter extends BaseExpandableListAdapter {
             view = inflater.inflate(R.layout.layout_buying_header, null);
         }
         TextView buyingTagListsHeader = view.findViewById(R.id.buyingTagListsHeader);
-        int stringId = (0 == 1) ? R.string.buying_tab_shared_string : R.string.buying_tab_favorit_string;
+        int stringId = (0 == i) ? R.string.buying_tab_shared_string : R.string.buying_tab_favorit_string;
         buyingTagListsHeader.setText(stringId);
         return view;
     }
@@ -109,11 +109,14 @@ public class BuyingListAdapter extends BaseExpandableListAdapter {
                 BuyingListAdapter.this.notifyDataSetChanged();
             }
         });
+
+        // TODO Fill the container with images
+
         return view;
     }
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
+        return false;
     }
 }
