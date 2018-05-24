@@ -19,7 +19,7 @@
     <TextView
         android:id="@+id/sellingOfferEstimatedMortageTextView"
         style="@style/sellingOfferTextViewStyle"
-        android:text="@string/selling_offer_estimated_mortage_string"/>
+        android:text="@string/selling_offer_estimated_mortgage_string"/>
 
     <TextView
         android:id="@+id/sellingOfferTypicalWithRealsyTextView"
