@@ -61,12 +61,14 @@
     <!-- Selling Offer View String -->
     <string name="selling_offer_desired_sell_price_string">DESIRED SELL PRICE %d</string>
     <string name="selling_offer_suggested_sell_price_string">SUGGESTED SELL PRICE %d</string>
-    <string name="selling_offer_estimated_mortage_string">ESTIMATED MORTAGE %d</string>
+    <string name="selling_offer_estimated_mortgage_string">ESTIMATED MORTGAGE %d</string>
     <string name="selling_offer_typical_with_realsy_string">TYPICAL %d%  WITH REALSY %d</string>
     <string name="selling_offer_net_string">NET %d $</string>
 
     <!-- Selling Tab Strings -->
     <string name="selling_tab_create_listing_button">Create new listing</string>
-    <string name="selling_tab_modify_comparables_button">Modify Comparables</string>
+    <string name="selling_tab_modify_comparable_button">Modify Comparable</string>
+    <string name="selling_tab_active_listing">Active Listings</string>
+    <string name="selling_tab_comparable_listing">Listings comparable with yours</string>
 
 </resources>
