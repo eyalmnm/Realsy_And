@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="@dimen/selling_active_item_width"
+    android:layout_height="@dimen/selling_active_item_height"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/detailsLayout"
+        layout="@layout/layout_buying_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:id="@+id/sellingActiveItemOffersContainerScrollView"
+        android:layout_width="@dimen/selling_active_item_offers_container_width"
+        android:layout_height="@dimen/selling_active_item_offers_container_height"
+        android:layout_below="@id/detailsLayout"
+        android:background="@drawable/buying_item_details_bg_layers_list"
+        android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/sellingActiveItemOffersContainerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp" />
+    </ScrollView>
+
+</RelativeLayout>

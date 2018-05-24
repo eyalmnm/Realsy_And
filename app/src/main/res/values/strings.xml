@@ -51,11 +51,22 @@
     <string name="profile_activity_label">Profile</string>
 
     <!-- Buying Layout Strings -->
-    <string name="buying_item_address_full_address">%s, %s, %s</string>
+    <string name="buying_item_address_full_address">%s, %s, %s %s</string>
     <string name="buying_item_property_details">%d Beds | %d Baths | %d sqft</string>
 
     <!-- Buying Tab Strings -->
     <string name="buying_tab_shared_string">Listings Shared with you</string>
     <string name="buying_tab_favorit_string">Favorite Listings</string>
+
+    <!-- Selling Offer View String -->
+    <string name="selling_offer_desired_sell_price_string">DESIRED SELL PRICE %d</string>
+    <string name="selling_offer_suggested_sell_price_string">SUGGESTED SELL PRICE %d</string>
+    <string name="selling_offer_estimated_mortage_string">ESTIMATED MORTAGE %d</string>
+    <string name="selling_offer_typical_with_realsy_string">TYPICAL %d%  WITH REALSY %d</string>
+    <string name="selling_offer_net_string">NET %d $</string>
+
+    <!-- Selling Tab Strings -->
+    <string name="selling_tab_create_listing_button">Create new listing</string>
+    <string name="selling_tab_modify_comparables_button">Modify Comparables</string>
 
 </resources>

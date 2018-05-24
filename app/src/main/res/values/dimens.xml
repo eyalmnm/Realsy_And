@@ -62,9 +62,27 @@
     <dimen name="buying_item_details_text_size">12sp</dimen>
     <dimen name="buying_item_like_width">40sp</dimen>
     <dimen name="buying_item_like_height">40sp</dimen>
-    <dimen name="buying_item_like_bottom_margin">45dp</dimen>
+    <dimen name="buying_item_like_top_margin">-20dp</dimen>
 
     <!-- Buying Tab Dimensions -->
     <dimen name="buying_tab_shared_listing_text_size">22sp</dimen>
     <dimen name="buying_tab_favorite_listing_text_size">22sp</dimen>
+
+    <!-- Selling Layout Dimensions -->
+    <dimen name="selling_active_item_width">335dp</dimen>
+    <dimen name="selling_active_item_height">415dp</dimen>
+    <dimen name="selling_active_item_offers_container_width">335dp</dimen>
+    <dimen name="selling_active_item_offers_container_height">140dp</dimen>
+
+    <!-- Selling Offer View Dimensions -->
+    <dimen name="selling_offer_view_width">155dp</dimen>
+    <dimen name="selling_offer_view_height">113dp</dimen>
+
+    <!-- Selling Comparable Layout Dimensions -->
+    <dimen name="selling_comparable_item_width">355dp</dimen>
+    <dimen name="selling_comparable_item_height">275dp</dimen>
+
+    <!-- Selling Tab Dimensions -->
+    <dimen name="selling_fragment_create_new_listing_button_width">335dp</dimen>
+    <dimen name="selling_fragment_create_new_listing_button_height">45dp</dimen>
 </resources>

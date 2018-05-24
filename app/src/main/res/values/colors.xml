@@ -36,5 +36,7 @@
     <color name="buying_tab_shared_listing_text_color">#6A6A6A</color>
     <color name="buying_tab_favorite_listing_text_color">#6A6A6A</color>
 
+    <!-- Selling Offer View Colors -->
+    <color name="selling_offer_view_text_color">#6A6A6A</color>
 
 </resources>

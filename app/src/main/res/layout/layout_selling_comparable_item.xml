@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="@dimen/selling_comparable_item_width"
+    android:layout_height="@dimen/selling_comparable_item_height"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/detailsLayout"
+        layout="@layout/layout_buying_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

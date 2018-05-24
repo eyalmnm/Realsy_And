@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <Button
+        android:id="@+id/sellingCreateNewListingButton"
+        android:layout_width="@dimen/selling_fragment_create_new_listing_button_width"
+        android:layout_height="@dimen/selling_fragment_create_new_listing_button_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_by_mail_submit_btn_bg_selector"
+        android:text="@string/selling_tab_create_listing_button"
+        android:textAllCaps="true"
+        android:textColor="@color/register_by_mail_submit_btn_text_color_selector"
+        android:textSize="16sp" />
+
+    <ExpandableListView
+        android:id="@+id/sellingPropertiesExpandableListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:cacheColorHint="#000000"
+        android:focusable="false"
+        android:groupIndicator="@android:color/transparent"
+        android:listSelector="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/sellingModifyComparablesButton"
+        android:layout_width="@dimen/selling_fragment_create_new_listing_button_width"
+        android:layout_height="@dimen/selling_fragment_create_new_listing_button_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selling_tab_modify_comparables_button_bg_selector"
+        android:text="@string/selling_tab_modify_comparables_button"
+        android:textAllCaps="true"
+        android:textColor="@color/selling_tab_modify_comparables_btn_text_color_selector"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
