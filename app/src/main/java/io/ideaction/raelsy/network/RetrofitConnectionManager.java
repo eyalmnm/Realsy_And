@@ -34,10 +34,12 @@ public class RetrofitConnectionManager {
 
     private RetrofitConnectionManager() {
         baseUrl = BuildConfig.SERVER_BASE_URL;
-        retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        if (null == retrofit) {
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(baseUrl)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
     }
 
     // Buying API Methods
