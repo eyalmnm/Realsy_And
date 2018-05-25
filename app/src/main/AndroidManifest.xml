@@ -71,7 +71,7 @@
 
         <!-- Main Menu TODO Change to Fragment-->
         <activity
-            android:name=".screens.fragments.MainMenuFragment"
+            android:name=".screens.MainMenuActivity"
             android:configChanges="screenSize|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

@@ -2,42 +2,30 @@ package io.ideaction.raelsy.screens;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
-import android.widget.FrameLayout;
+import android.view.View;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import io.ideaction.raelsy.R;
 import io.ideaction.raelsy.screens.fragments.BuySellFragment;
-import io.ideaction.raelsy.screens.fragments.MainMenuFragment;
 
 import static android.Manifest.permission.INTERNET;
 
 public class MainScreenActivity extends AppCompatActivity {
     private static final String TAG = "MainScreenActivity";
 
-    // Activity Constants
-    private static final String TAG_MASTER_FRAGMENT = "TAG_MASTER_FRAGMENT";
-    private static final String TAG_DETAIL_FRAGMENT = "TAG_DETAIL_FRAGMENT";
-
     // UI Components
-    private DrawerLayout drawerLayout;
     private Toolbar toolbar;
-    private FrameLayout detailFragmentContainer;
-    private NavigationView navigationFragmentContainer;
 
     private Context context;
 
@@ -49,24 +37,22 @@ public class MainScreenActivity extends AppCompatActivity {
 
         // setup toolbar
         toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        // setup drawer view
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationFragmentContainer = (NavigationView) findViewById(R.id.navigation_fragment_container);
-        navigationFragmentContainer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        ImageView toolBarImage = toolbar.findViewById(R.id.toolbar_image);
+        toolBarImage.setImageDrawable(getResources().getDrawable(R.drawable.toolbar_menu));
+        toolBarImage.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                return true;
+            public void onClick(View view) {
+                showMainMenu();
             }
         });
+        setSupportActionBar(toolbar);
 
         // setup menu icon
-        final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setHomeAsUpIndicator(R.drawable.if_menu);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+//        final ActionBar actionBar = getSupportActionBar();
+//        if (actionBar != null) {
+//            actionBar.setHomeAsUpIndicator(R.drawable.if_menu);
+//            actionBar.setDisplayHomeAsUpEnabled(true);
+//        }
 
         // Check permissions
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -80,32 +66,30 @@ public class MainScreenActivity extends AppCompatActivity {
         }
     }
 
+//    private void showMainMenu() {
+//        FragmentManager fragmentManager = getFragmentManager();
+//        MainMenuFragment mainMenuFragment = new MainMenuFragment();
+//        fragmentManager.beginTransaction()
+//                .setCustomAnimations(R.animator.enter_from_left, R.animator.exit_to_right)
+//                .add(R.id.containerLayout, mainMenuFragment).commit();
+//    }
+
+    private void showMainMenu() {
+        Intent intent = new Intent(context, MainMenuActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.activity_slide_in, R.anim.activity_slide_out);
+    }
+
+
     private void continueAppLoading() {
         // insert detail fragment into detail container
         BuySellFragment buySellFragment = BuySellFragment.newInstance();
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .add(R.id.detail_fragment_container, buySellFragment, TAG_DETAIL_FRAGMENT)
-                .commit();
-
-        // insert master fragment into master container (i.e. nav view)
-        MainMenuFragment mainMenuFragment = MainMenuFragment.newInstance();
-        fragmentManager.beginTransaction()
-                .add(R.id.navigation_fragment_container, mainMenuFragment, TAG_MASTER_FRAGMENT)
+                .add(R.id.containerLayout, buySellFragment, "buySellFragment")
                 .commit();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // The action bar home/up action should open or close the drawer.
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                drawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     // ********* Handling permissions section *********
     private static final int PERMISSION_REQUEST_CODE = 200;

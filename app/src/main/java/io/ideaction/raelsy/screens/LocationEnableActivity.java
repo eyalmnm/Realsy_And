@@ -17,7 +17,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import io.ideaction.raelsy.R;
-import io.ideaction.raelsy.screens.fragments.MainMenuFragment;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 
