@@ -77,6 +77,7 @@
     <!-- Selling Offer View Dimensions -->
     <dimen name="selling_offer_view_width">155dp</dimen>
     <dimen name="selling_offer_view_height">113dp</dimen>
+    <dimen name="selling_offer_view_text_size">10sp</dimen>
 
     <!-- Selling Comparable Layout Dimensions -->
     <dimen name="selling_comparable_item_width">355dp</dimen>
@@ -85,4 +86,9 @@
     <!-- Selling Tab Dimensions -->
     <dimen name="selling_fragment_create_new_listing_button_width">335dp</dimen>
     <dimen name="selling_fragment_create_new_listing_button_height">45dp</dimen>
+
+    <!-- App Tools Radio Dimensions -->
+    <dimen name="app_tools_radio_button_width">94dp</dimen>
+    <dimen name="app_tools_radio_button_height">70dp</dimen>
+
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,12 +8,47 @@
         android:id="@+id/toolbar"
         layout="@layout/layout_toolbar_image" />
 
+    <FrameLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/appToolsContainer" />
 
     <LinearLayout
         android:id="@+id/appToolsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/appToolsRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/homeRadioButton"
+                style="@style/appToolsRadioButtonStyle"
+                android:background="@drawable/home_button_selector"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/searchRadioButton"
+                style="@style/appToolsRadioButtonStyle"
+                android:background="@drawable/search_button_selector" />
+
+            <RadioButton
+                android:id="@+id/notificationRadioButton"
+                style="@style/appToolsRadioButtonStyle"
+                android:background="@drawable/notification_button_selector" />
+
+            <RadioButton
+                android:id="@+id/chatRadioButton"
+                style="@style/appToolsRadioButtonStyle"
+                android:background="@drawable/chat_button_selector" />
+        </RadioGroup>
 
     </LinearLayout>
 </RelativeLayout>
