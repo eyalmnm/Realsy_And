@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 import io.ideaction.raelsy.R;
 import io.ideaction.raelsy.models.BuyingItem;
@@ -23,9 +24,9 @@ public class SellingListAdapter extends BaseExpandableListAdapter {
     private LayoutInflater inflater;
     private ArrayList<ArrayList<SellingItem>> sellingItems;
 
-    public SellingListAdapter(Context context, LayoutInflater inflater, ArrayList<ArrayList<SellingItem>> sellingItems) {
+    public SellingListAdapter(Context context, ArrayList<ArrayList<SellingItem>> sellingItems) {
         this.context = context;
-        this.inflater = inflater;
+        this.inflater = LayoutInflater.from(context);
         this.sellingItems = sellingItems;
     }
 
