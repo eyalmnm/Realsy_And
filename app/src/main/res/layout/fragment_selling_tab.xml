@@ -31,7 +31,7 @@
         android:listSelector="@android:color/transparent" />
 
     <Button
-        android:id="@+id/sellingModifyComparablesButton"
+        android:id="@+id/sellingModifyComparableButton"
         android:layout_width="@dimen/selling_fragment_create_new_listing_button_width"
         android:layout_height="@dimen/selling_fragment_create_new_listing_button_height"
         android:layout_gravity="center"
