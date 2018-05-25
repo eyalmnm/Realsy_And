@@ -8,7 +8,9 @@ import java.util.List;
 import io.ideaction.raelsy.BuildConfig;
 import io.ideaction.raelsy.network.models.BuyingItemModel;
 import io.ideaction.raelsy.network.models.BuyingItemsResponse;
+import io.ideaction.raelsy.network.models.SellingItemsResponse;
 import io.ideaction.raelsy.network.rest.GetBuyingItemsInterface;
+import io.ideaction.raelsy.network.rest.GetSellingItemsInterface;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,6 +40,7 @@ public class RetrofitConnectionManager {
                 .build();
     }
 
+    // Buying API Methods
     public void getMyFavoriteItems(String myId, Callback<BuyingItemsResponse> callback) {
         GetBuyingItemsInterface apiService = retrofit.create(GetBuyingItemsInterface.class);
         Call<BuyingItemsResponse> call = apiService.getMyFavoriteItems(myId);
@@ -47,6 +50,19 @@ public class RetrofitConnectionManager {
     public void getSharedWithMeBuyingItems(String myId, Callback<BuyingItemsResponse> callback) {
         GetBuyingItemsInterface apiService = retrofit.create(GetBuyingItemsInterface.class);
         Call<BuyingItemsResponse> call = apiService.getSharedWithMeItems(myId);
+        call.enqueue(callback);
+    }
+
+    // Selling API Methods
+    public void getActiveListingItems(String myId, Callback<SellingItemsResponse> callback) {
+        GetSellingItemsInterface apiService = retrofit.create(GetSellingItemsInterface.class);
+        Call<SellingItemsResponse> call = apiService.getActiveListingItems(myId);
+        call.enqueue(callback);
+    }
+
+    public void getComparableItems(String myId, Callback<SellingItemsResponse> callback) {
+        GetSellingItemsInterface apiService = retrofit.create(GetSellingItemsInterface.class);
+        Call<SellingItemsResponse> call = apiService.getComparableItems(myId);
         call.enqueue(callback);
     }
 }
