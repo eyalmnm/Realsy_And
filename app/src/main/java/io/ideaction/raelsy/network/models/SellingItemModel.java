@@ -39,12 +39,12 @@ public class SellingItemModel {
     private boolean liked;
 
     @SerializedName("offerItems")
-    private ArrayList<OfferItem> offerItems;
+    private OfferItem offerItem;
 
     public SellingItemModel(int id, int price, String address, String city, String state,
                             String zipCode, int bedRooms, int bathRooms, int apartmentArea,
                             int totalArea, String remarks, String[] imagesUrl, boolean liked,
-                            ArrayList<OfferItem> offerItems) {
+                            OfferItem offerItem) {
         this.id = id;
         this.price = price;
         this.address = address;
@@ -58,7 +58,7 @@ public class SellingItemModel {
         this.remarks = remarks;
         this.imagesUrl = imagesUrl;
         this.liked = liked;
-        this.offerItems = offerItems;
+        this.offerItem = offerItem;
     }
 
     public int getId() {
@@ -165,11 +165,11 @@ public class SellingItemModel {
         this.liked = liked;
     }
 
-    public ArrayList<OfferItem> getOfferItems() {
-        return offerItems;
+    public OfferItem getOfferItem() {
+        return offerItem;
     }
 
-    public void setOfferItems(ArrayList<OfferItem> offerItems) {
-        this.offerItems = offerItems;
+    public void setOfferItem(OfferItem offerItem) {
+        this.offerItem = offerItem;
     }
 }
