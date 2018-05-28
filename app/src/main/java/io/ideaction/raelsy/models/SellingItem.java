@@ -27,12 +27,12 @@ public class SellingItem implements Parcelable {
 
     private boolean liked;
 
-    private ArrayList<OfferItem> offerItems;
+    private OfferItem offerItem;
 
     public SellingItem(int id, int price, String address, String city, String state,
                        String zipCode, int bedRooms, int bathRooms, int apartmentArea,
                        int totalArea, String remarks, String[] imagesUrl, boolean liked,
-                       ArrayList<OfferItem> offerItems) {
+                       OfferItem offerItem) {
         this.id = id;
         this.price = price;
         this.address = address;
@@ -46,7 +46,7 @@ public class SellingItem implements Parcelable {
         this.remarks = remarks;
         this.imagesUrl = imagesUrl;
         this.liked = liked;
-        this.offerItems = offerItems;
+        this.offerItem = offerItem;
     }
 
     public SellingItem(SellingItemModel sellingItemModel) {
@@ -63,7 +63,7 @@ public class SellingItem implements Parcelable {
         this.remarks = sellingItemModel.getRemarks();
         this.imagesUrl = sellingItemModel.getImagesUrl();
         this.liked = sellingItemModel.isLiked();
-        this.offerItems = sellingItemModel.getOfferItems();
+        this.offerItem = sellingItemModel.getOfferItem();
     }
 
     public int getId() {
@@ -118,8 +118,8 @@ public class SellingItem implements Parcelable {
         return liked;
     }
 
-    public ArrayList<OfferItem> getOfferItems() {
-        return offerItems;
+    public OfferItem getOfferItem() {
+        return offerItem;
     }
 
     public void setLiked(boolean liked) {
@@ -142,7 +142,7 @@ public class SellingItem implements Parcelable {
                 ", remarks='" + remarks + '\'' +
                 ", imagesUrl=" + Arrays.toString(imagesUrl) +
                 ", liked=" + liked +
-                ", offerItems=" + offerItems +
+                ", offerItem=" + offerItem +
                 '}';
     }
 
@@ -167,7 +167,7 @@ public class SellingItem implements Parcelable {
         if (remarks != null ? !remarks.equals(that.remarks) : that.remarks != null) return false;
         // Probably incorrect - comparing Object[] arrays with Arrays.equals
         if (!Arrays.equals(imagesUrl, that.imagesUrl)) return false;
-        return offerItems != null ? offerItems.equals(that.offerItems) : that.offerItems == null;
+        return offerItem.equals(that.offerItem);
     }
 
     @Override
@@ -185,7 +185,7 @@ public class SellingItem implements Parcelable {
         result = 31 * result + (remarks != null ? remarks.hashCode() : 0);
         result = 31 * result + Arrays.hashCode(imagesUrl);
         result = 31 * result + (liked ? 1 : 0);
-        result = 31 * result + (offerItems != null ? offerItems.hashCode() : 0);
+        result = 31 * result + offerItem.hashCode();
         return result;
     }
 
@@ -210,7 +210,7 @@ public class SellingItem implements Parcelable {
         dest.writeString(this.remarks);
         dest.writeStringArray(this.imagesUrl);
         dest.writeByte(this.liked ? (byte) 1 : (byte) 0);
-        dest.writeTypedList(this.offerItems);
+        dest.writeParcelable(this.offerItem, flags);
     }
 
     protected SellingItem(Parcel in) {
@@ -227,7 +227,7 @@ public class SellingItem implements Parcelable {
         this.remarks = in.readString();
         this.imagesUrl = in.createStringArray();
         this.liked = in.readByte() != 0;
-        this.offerItems = in.createTypedArrayList(OfferItem.CREATOR);
+        this.offerItem = in.readParcelable(OfferItem.class.getClassLoader());
     }
 
     public static final Creator<SellingItem> CREATOR = new Creator<SellingItem>() {
